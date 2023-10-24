@@ -21,15 +21,42 @@ html, body{
 .login_panel{
     height: 100vh;
     width: 50vw;
-    background-color: yellow;
+    background-color: rgb(48, 48, 47);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo_panel{
     height: 100vh;
     width: 50vw;    
-    background-color: blue;
+    background-color: rgb(40, 168, 147);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.logo_content{
+    position: relative;
+    bottom: 55px;
+    color: rgb(56, 54, 54);
+}
+
+.login_content{
+    background-color: rgb(110, 108, 108);
+    width: 100%;    
+    height: 80%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(0, 184, 240);
+    justify-content: space-between;
+    padding: 10px;
 }
