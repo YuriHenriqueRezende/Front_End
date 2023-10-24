@@ -1,29 +1,35 @@
-/* COMENTARIO */
+/* RESETANDO OS ESTILOS PADRÃO DO NAVEGADOR */
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-appearance:none;
-    -moz-appearance:none;
+    margin: 0; /* margem externa zero */
+    padding: 0; /* margem interna */
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 html, body{
     height: 100%;
 }
 
-/*  AGORA COMEÇA */
-.Login{
-    height: 100%;
-    width: 100%;
-    background-color:rgb(53, 53, 128);
+/* INICIANDO OS ESTILOS DA APLICAÇÃO */
+
+.login{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
 }
 
-.Login_panel{
+.login_panel{
     height: 100vh;
     width: 50vw;
-    background-color: black;
+    background-color: yellow;
 }
 
-.Logo_panel{
+.logo_panel{
     height: 100vh;
-    width: 50vw;
-    background-color: red;
+    width: 50vw;    
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
