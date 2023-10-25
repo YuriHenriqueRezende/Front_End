@@ -14,7 +14,7 @@
                     <h2>LOGIN</h2>
                     <a href="">CADASTRO?</a>
             </div>
-            <form class="login_form">
+            <form class="login_form" onsubmit="sendCredentialsToBackend(event)">
             <div class="form_content">
                 <label for="e-mail">E-mail:</label>
                 <input type="email" class="login_input" id="e-mail" placeholder="  DIGITE SEU E-MAIL" required>
@@ -35,4 +35,5 @@
         </section>
     </main>    
 </body>
+<script src="./script.js"></script>
 </html>
