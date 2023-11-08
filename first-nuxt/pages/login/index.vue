@@ -1,3 +1,11 @@
+<script setup>
+    definePageMeta({
+        layout: "layout-login"
+    });
+</script>
+
 <template>
-    <h1> Tela Login </h1>
+    <div>
+        <h1> Tela Login </h1>
+    </div>
 </template>
