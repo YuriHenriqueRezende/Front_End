@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div>
-        <h1> Tela Login </h1>
+    <div>        
+        <h1>LOGIN Page!</h1>
     </div>
 </template>

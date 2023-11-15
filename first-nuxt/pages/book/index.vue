@@ -1,5 +1,5 @@
 <template>
-    <div>
-        <h1> Book Page</h1>
+    <div>    
+        <h1>Booking Page!</h1>
     </div>
 </template>
