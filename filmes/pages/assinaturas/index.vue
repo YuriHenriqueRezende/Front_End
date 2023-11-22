@@ -5,15 +5,14 @@
 </script>
 
 
-
-
 <template>
     <div>
         <h1>Assinaturas Disponiveis</h1>
 
         <section v-for="assinatura in subscriptions" 
-        :key="assinatura.id">
-            <p>{{ assinatura.id }}</p>
+        :key="assinatura" >
+            <span>{{ assinatura.nome }}: R$ </span>
+            <span>{{ assinatura.valor }} </span>
         </section>   
     </div>
 </template>
