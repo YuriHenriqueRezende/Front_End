@@ -1,3 +1,12 @@
+<script setup>
+
+
+</script>
+
+
+
+
+
 <template>
     <div>
         <NuxtLink to="/">login</NuxtLink> <br>
@@ -5,7 +14,4 @@
         <NuxtLink to="/ambientes">ambientes</NuxtLink> <br>
         <NuxtLink to="/cargos">cargos</NuxtLink> <br>
     </div>
-    
-
-
 </template>
