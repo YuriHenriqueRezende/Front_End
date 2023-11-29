@@ -6,11 +6,9 @@
 
   const save = async () => {
     if (selectedUser.value) {
-      // A lógica para lidar com o botão sendo clicado quando uma opção está selecionada
       console.log('Usuário selecionado:', selectedUser.value);
     } else {
-      // A lógica para lidar com o botão sendo clicado sem nenhuma opção selecionada
-      console.warn('Selecione um usuário antes de entrar.');
+      console.warn('falha.');
     }
   };
 </script>
@@ -27,7 +25,9 @@
           </option>
         </select>
         <br><br>
+        <NuxtLink :to="'/tarefas'">
         <button @click="save" v-if="selectedUser">ENTRAR</button>
+        </NuxtLink>
       </div>
     </div>
   </div>
