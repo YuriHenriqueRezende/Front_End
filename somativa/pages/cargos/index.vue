@@ -15,7 +15,7 @@
     <section v-for="cargo in cargos.data" 
         :key="cargo.nome">
             <p>{{ cargo.nome }}:</p>
-            <p>{{ cargo.nivelAcesso }}</p>
+            <p>nivelAcesso:{{ cargo.nivelAcesso }}</p>
             <br><br>
         </section>   
 </template>
