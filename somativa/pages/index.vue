@@ -25,7 +25,7 @@
           </option>
         </select>
         <br><br>
-        <NuxtLink :to="'/tarefas'">
+        <NuxtLink :to="'/Menu'">
         <button @click="save" v-if="selectedUser">ENTRAR</button>
         </NuxtLink>
       </div>
