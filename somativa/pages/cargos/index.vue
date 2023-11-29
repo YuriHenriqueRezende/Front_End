@@ -1,5 +1,22 @@
+<script setup>
+
+</script>
+
+
+
+
+
+
+
+
+
 <template>
-    <div>    
-        <h1>Cargos!</h1>
+    <div>
+        <NuxtLink to="/">login</NuxtLink> <br>
+        <NuxtLink to="/tarefas">tarefas</NuxtLink> <br>
+        <NuxtLink to="/ambientes">ambientes</NuxtLink> <br>
+        <NuxtLink to="/cargos">cargos</NuxtLink> <br>
     </div>
+    <h1>CARGOS:</h1>
+
 </template>
