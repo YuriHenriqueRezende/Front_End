@@ -1,5 +1,5 @@
 <script setup>
-  const { data: tarefa } = await useFetch('http://localhost:8000/tarefas');
+  const { data: tarefa } = await useFetch('http://localhost:8000/tarefas?all');
   console.log(tarefa);
 </script>
 
@@ -18,6 +18,8 @@
     <section v-for="taref in tarefa.data" 
         :key="taref.nome">
             <p>{{ taref.nome }}:</p>
+            <p> Status: {{ taref.idStatusFK.nome }}</p>
+
             <br><br>
         </section>   
 </template>
