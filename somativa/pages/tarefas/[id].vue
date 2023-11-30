@@ -5,7 +5,15 @@ const {data: tarefa} =
 await useFetch(`http://localhost:8000/tarefas/${route.params.id}`,{
     key: 'tarefaRequest'
 });
+
+const {data: tarefaCom} = 
+await useFetch(`http://localhost:8000/tarefasUsuarios?completa/${route.params.id}`,{
+    key: 'completaRequest'
+});
+
   console.log(tarefa);
+  console.log(tarefaCom);
+
 </script>
 
 <template>
@@ -26,5 +34,8 @@ await useFetch(`http://localhost:8000/tarefas/${route.params.id}`,{
             <p>Descrição: {{ tarefa.data.descricao }}</p>
             <p>Solicitação: {{ tarefa.data.idSolicitanteFK.nome }}</p>
             <img :src="tarefa.data.idSolicitanteFK.image" alt="solicitante">
+            <br><br>
+            <p>Responsaveis: {{  }}</p>
+
 
 </template>
