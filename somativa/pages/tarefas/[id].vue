@@ -7,8 +7,7 @@ await useFetch(`http://localhost:8000/tarefas/${route.params.id}`,{
 });
 
 const {data: tarefaCom} = 
-await useFetch(`http://localhost:8000/tarefasUsuarios?completa/${route.params.id}`,{
-    key: 'completaRequest'
+await useFetch(`http://localhost:8000/tarefasUsuarios?tarefa=${route.params.id}`,{
 });
 
   console.log(tarefa);
@@ -29,7 +28,10 @@ await useFetch(`http://localhost:8000/tarefasUsuarios?completa/${route.params.id
             <p>Solicitação: {{ tarefa.data.idSolicitanteFK.nome }}</p>
             <img :src="tarefa.data.idSolicitanteFK.image" alt="solicitante">
             <br><br>
-            <p>Responsaveis: {{  }}</p>
+            <section v-for="tarefas in tarefaCom.data" :key="tarefa.id">
+                <p>Responsaveis: {{ tarefas.idUsuarioFK.nome }}</p>
+                <img :src="tarefas.idUsuarioFK.image" alt="solicitante">
+            </section>
 
 
 </template>
