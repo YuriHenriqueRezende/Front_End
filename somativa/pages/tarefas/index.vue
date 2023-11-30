@@ -19,6 +19,10 @@
         :key="taref.nome">
             <p>{{ taref.nome }}:</p>
             <p> Status: {{ taref.idStatusFK.nome }}</p>
+            <p> Ambiente: {{ taref.idAmbienteFK.nome }}</p>
+            <p> Prazo.: {{ taref.prazo }}</p>
+
+
 
             <br><br>
         </section>   
