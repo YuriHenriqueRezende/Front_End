@@ -3,9 +3,6 @@
   console.log(tarefa);
 </script>
 
-
-
-
 <template>
     <div>
         <NuxtLink to="/">login</NuxtLink> <br>
@@ -20,9 +17,9 @@
             <p> Status: {{ taref.idStatusFK.nome }}</p>
             <p> Ambiente: {{ taref.idAmbienteFK.nome }}</p>
             <p> Prazo.: {{ taref.prazo }}</p>
-
-
-
+            <NuxtLink :to="`/tarefas/${taref.id}`">
+                <button>Detalhes</button>
+            </NuxtLink>
             <br><br>
         </section>   
 </template>
