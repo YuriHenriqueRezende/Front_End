@@ -17,12 +17,6 @@ await useFetch(`http://localhost:8000/tarefasUsuarios?completa/${route.params.id
 </script>
 
 <template>
-    <div>
-        <NuxtLink to="/">login</NuxtLink> <br>
-        <NuxtLink to="/tarefas">tarefas</NuxtLink> <br>
-        <NuxtLink to="/detalhado">detalhado</NuxtLink> <br>
-        <NuxtLink to="/cargos">cargos</NuxtLink> <br>
-    </div>
     
     <h1>Detalhes:</h1>
             <p> Tarefa: {{ tarefa.data.nome }}</p>

@@ -1,4 +1,7 @@
 <script setup>
+    definePageMeta({
+        layout: "layout-login"
+    });
   import { ref } from 'vue';
 
   const { data: login } = await useFetch('http://localhost:8000/usuarios');

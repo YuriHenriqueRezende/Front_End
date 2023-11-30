@@ -4,12 +4,6 @@
 </script>
 
 <template>
-    <div>
-        <NuxtLink to="/">login</NuxtLink> <br>
-        <NuxtLink to="/tarefas">tarefas</NuxtLink> <br>
-        <NuxtLink to="/detalhado">detalhado</NuxtLink> <br>
-        <NuxtLink to="/cargos">cargos</NuxtLink> <br>
-    </div>
     <h1>Tarefas</h1>
     <section v-for="taref in tarefa.data" 
         :key="taref.nome">
