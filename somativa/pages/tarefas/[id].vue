@@ -44,5 +44,4 @@ await useFetch(`http://localhost:8000/tarefasStatus?tarefa=${route.params.id}`,{
             </section>
 
 
-
 </template>
