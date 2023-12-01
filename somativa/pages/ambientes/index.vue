@@ -2,12 +2,18 @@
   const { data: ambientes } = await useFetch('http://localhost:8000/ambientes');
   console.log(ambientes)
 
-  let show = false;
-    const setbutton = () => {
-        //alert("Cliquei no botão!")
-        show = true;
-        refreshNuxtData()
-    } 
+    let name;
+
+  const save = async () => {
+    await useFetch('http://localhost:8000/ambientes/', {
+        method: 'POST',
+        body: [{
+            nome: name,
+        }],
+        key: 'post'
+    });
+    alert("Salvo ambiente");
+  }
 
 </script>
 
@@ -15,11 +21,11 @@
     <div>
         <h1>Cadastro de Ambientes:</h1>
         <p>Nome: </p>
-        <input type="text">
-        <button @click="setbutton">Adicionar</button>
+        <input type="text" v-model="name">
+        <button @click="save">Adicionar</button>
         
         <section v-if="show === true">
-            
+
 
         </section>
 
