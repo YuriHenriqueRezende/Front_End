@@ -13,6 +13,7 @@
         key: 'post'
     });
     alert("Salvo ambiente");
+    window.location.reload()
   }
 
 </script>
