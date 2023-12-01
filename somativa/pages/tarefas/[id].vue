@@ -10,8 +10,10 @@ const {data: tarefaCom} =
 await useFetch(`http://localhost:8000/tarefasUsuarios?tarefa=${route.params.id}`,{
 });
 
-  console.log(tarefa);
-  console.log(tarefaCom);
+const {data: tarefaS} = 
+await useFetch(`http://localhost:8000/tarefasStatus?tarefa=${route.params.id}`,{
+});
+
 
 </script>
 
@@ -28,10 +30,19 @@ await useFetch(`http://localhost:8000/tarefasUsuarios?tarefa=${route.params.id}`
             <p>Solicitação: {{ tarefa.data.idSolicitanteFK.nome }}</p>
             <img :src="tarefa.data.idSolicitanteFK.image" alt="solicitante">
             <br><br>
+
             <section v-for="tarefas in tarefaCom.data" :key="tarefa.id">
                 <p>Responsaveis: {{ tarefas.idUsuarioFK.nome }}</p>
-                <img :src="tarefas.idUsuarioFK.image" alt="solicitante">
+                <img :src="tarefas.idUsuarioFK.image" alt="Responsaveis">
             </section>
+
+            <br><br>
+
+            <h1>Andamento do status: </h1>
+            <section v-for="tarefaSt in tarefaS.data" :key="tarefaSt.data">
+            <h1>{{ tarefaSt.idStatusFK.nome }}</h1>
+            </section>
+
 
 
 </template>
