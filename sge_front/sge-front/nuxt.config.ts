@@ -2,6 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
-    '~/assets/global.scss'
+    '~/assets/global.scss',
+    '~/assets/global-variables.scss'
+
   ]
 })
