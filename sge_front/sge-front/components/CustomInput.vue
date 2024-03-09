@@ -16,27 +16,21 @@ const model = defineModel();
     </div>
 </template>
 
-<style scoped lang="scss">
-.custom_input_field {
-    overflow-y: hidden;
-    label{
-        width: 100%;
-        color: black;
-    }
-    label:focus,
-    label:valid,
-    input:focus,
-    input:valid{
-        outline: 0;
-        border-color: crimson;
-    }
+<style scoped lang="sass">
+.custom_input_field 
+    overflow-y: hidden
+    label
+        width: 100%
+        color: black
 
-    input{
-        width:100%;
-        padding:10px;
-        border:0;
-        border-bottom: 2px solid black;
-        font-size:20px;
-    }
-}
+    input
+        width:100%
+        padding:10px
+        border:0
+        border-bottom: 2px solid black
+        font-size:20px
+        background-color: transparent
+        &:focus
+          outline: 0
+          border-color: crimson
 </style>

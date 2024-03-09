@@ -1,10 +1,10 @@
 <script setup lang="ts">
 
+
 </script>
 
 <template>
-    <main></main>
-    <h1>VAREJÃO DO TIÃO GAS</h1>
+
 </template>
 
 <style scoped lang="sass">

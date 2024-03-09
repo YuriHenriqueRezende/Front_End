@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   },
   modules: [
     'nuxt-primevue',
-    
+    '@sidebase/nuxt-auth'
   ],
   primevue: {
     components: {
@@ -16,7 +16,31 @@ export default defineNuxtConfig({
   css: [
     'primeicons/primeicons.css', //css dos ícones do primevue
     'primevue/resources/themes/aura-light-green/theme.css', // css tema dos componentes primevue
-    '~/assets/style/global-variables.scss',  //variáveis css global customizado para toda a aplicação
-    '~/assets/style/global-project.scss',  //css global customizado para toda a aplicação
-  ]
+    '~/assets/style/global-project.sass', //variáveis css global customizado para toda a aplicação
+    '~/assets/style/global-variables.sass', //css global customizado para toda a aplicação
+  ],
+  auth: {
+    baseURL: 'http://localhost:8000',
+    provider: {
+      type: 'local', // local vai manter o token até acontecer o logout, assim como o Webtoken
+      // type: 'refresh', // refresh vai atualiar o token de acesso, assim como o JWT
+      endpoints: {
+        signIn: { path: '/api/auth/token/login', method: 'POST' }, // rota de login
+        signOut: { path: '/api/auth/token/logout/', method: 'POST' }, // rota de logout
+        signUp: { path: '', method: 'get' }, // rota de cadastro
+        signSession: { path: '/api/auth/token/logout/', method: 'get' }, // rota autenticada para verificação se foi autenticado c/ sucesso
+        // refresh: {}, // rota para renovar o token (somente no type refreh)
+      },
+      token: {
+        signInResponseTokenPointer: '/auth_token', // indica o local do Token Acess na response do Backend
+        //maxAgeInSeconds: 600, // validade do token refresh
+      },
+      // refreshToken: { signInResponseRefreshTokenPointer: '', // Local do Token Refresh
+      // maxAgeInSeconds: 600, // validade do token refresh
+      // },
+      pages: {
+        login: '/' // endereço (rota) da página de login
+      }
+    }
+  }
 })
