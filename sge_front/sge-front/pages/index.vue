@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import { ref, computed, reactive } from 'vue'
+    const { signIn } = useAuth();
     
     //JÉSSICA NÃO TRANQUE O CURSO:
     //const username = ref('')
@@ -9,7 +11,17 @@
         password: ''
     });
 
+    const submitLogin = async ()=> {
+        console.log("Trying to login with credentials below:", credentials);
+        try{
+            await signIn(credentials, { redirect: false});
+            navigateTo('/home');
 
+        } catch(error){
+            console.log("Error", error);
+
+        }
+    }
 
     /*
     exemplos para explicar typescript
@@ -45,7 +57,7 @@
          <section class="login_panel">
             <div class="login_content flex_center">
                 <h1>LOGIN</h1>
-                <form class="login_form">
+                <form class="login_form" v-on:submit.prevent="submitLogin">
                     <div class="input_container">
                         <CustomInput label="LOGIN" inputId="user_login"
                             v-model="credentials.username"
@@ -63,67 +75,74 @@
     </main>
 </template>
 
-<style scoped lang="sass">
-    .flex_center
-        display: flex
-        flex-direction: row
-        align-items: center
-        justify-content: center
-    
+<style scoped lang="scss">
 
-    .login_main
-        width: 100vw
-        height: 100vh       
-        background-color: var(--dark-background-color)
+    .flex_center{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .logo_panel
-            display: none
-            width: 50vw
-            height: 100vh   
-            flex-direction: column  
-            color: var(--light-background-color)       
-            img              
-                margin: 0px 0px 25px 0px
-                align-items: center
-                width: 65%
-                height: 45%
-            
+    .login_main{
+        width: 100vw;
+        height: 100vh;       
+        background-color: var(--dark-background-color);
+
+        .logo_panel{
+            display: none;
+            width: 50vw;
+            height: 100vh;   
+            flex-direction: column;  
+            color: var(--light-background-color);       
+            img{              
+                margin: 0px 0px 25px 0px;
+                align-items: center;
+                width: 65%;
+                height: 45%;
+            }
+        }
+
+        .login_panel{
+            width: 100vw;
+            height: 100vh;  
+            background-color: var(--light-background-color);
+
+            .login_content{
+                flex-direction: column;
+                width: 100%;
+                height: 80%;
+
+                h1{
+                    width: 120px;
+                    padding-top: 10px;
+                    padding-bottom: 50px;
+                    font-size: 36px;
+                }
+                .login_form{
+                    width: 60%;
+                    .input_container{
+                        margin-top: 30px;
+                    }
+                    .customButton{
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 550px){
+        .login_main{
+            .login_panel{
+                width: 50vw;
+            }
+            .logo_panel{
+                display: flex;
+            }
+        }
+    }
+
         
 
-        .login_panel
-            width: 100vw
-            height: 100vh  
-            background-color: var(--light-background-color)
-
-            .login_content
-                flex-direction: column
-                width: 100%
-                height: 80%
-
-                h1
-                    width: 120px
-                    padding-top: 10px
-                    padding-bottom: 50px
-                    font-size: 36px
-                
-                .login_form
-                    width: 60%
-                    .input_container
-                        margin-top: 30px
-                    
-                    .customButton
-                        margin-top: 50px
-                    
-                
-            
-        
-    
-
-    @media screen and (min-width: 550px)
-        .login_main
-            .login_panel
-                width: 50vw
-            
-            .logo_panel
-                display: flex
 </style>

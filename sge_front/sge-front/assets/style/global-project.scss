@@ -1,4 +1,35 @@
+/*aqui estamos importando uma fonte nova para o projeto*/
+@font-face{
+    font-family: 'Varela Round';
+    src: url('../fonts/VarelaRound-Regular.ttf');
+}
 
+*,
+html,
+body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Varela Round';/*aqui padronizamos para o projeto a fonte*/
+}
+
+.customButton{
+    background-color: #dc3d3d;
+    color: white;
+    border: none;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    &:hover{ background-color: #e05e5e;}
+    &:disabled{ background-color: #d38f8f;}
+}
+
+/*SCSS PARA EFEITO ESTRELADO NAS TELAS*/
 @keyframes gradient {
     0% {
         background-position: 0% 50%;

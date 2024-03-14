@@ -7,6 +7,7 @@ const props = defineProps({
 });
 //o model vai definir a informação que VAI PARA fora do componente
 const model = defineModel();
+
 </script>
 
 <template>
@@ -16,21 +17,24 @@ const model = defineModel();
     </div>
 </template>
 
-<style scoped lang="sass">
-.custom_input_field 
-    overflow-y: hidden
-    label
-        width: 100%
-        color: black
+<style scoped lang="scss">
+.custom_input_field {
+    overflow-y: hidden;
+    label{
+        width: 100%;
+        color: black;
+    }    
 
-    input
-        width:100%
-        padding:10px
-        border:0
-        border-bottom: 2px solid black
-        font-size:20px
-        background-color: transparent
-        &:focus
-          outline: 0
-          border-color: crimson
+    input{
+        width:100%;
+        padding:10px;
+        border:0;
+        border-bottom: 2px solid black;
+        font-size:20px;
+        &:focus{ 
+             outline: 0;
+             border-color: crimson;
+        }
+    }
+}
 </style>
