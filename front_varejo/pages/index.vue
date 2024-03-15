@@ -7,7 +7,7 @@
         <div>
             <h1 class="color">VAREJÃO DO TIÃO GÁS</h1>
         </div>
-        <select class="position">REDES SOCIAIS</select>
+        <select class="position"></select>
 
     </main>
 
