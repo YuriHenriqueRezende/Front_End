@@ -4,11 +4,9 @@
 
 <template>
     <main class="bar_up login_main">
-        <div>
-            <h1 class="color">VAREJÃO DO TIÃO GÁS</h1>
+        <div class="position">
+                <h1 class="color">VAREJÃO DO TIÃO GÁS</h1>
         </div>
-        <select class="position"></select>
-
     </main>
 
 </template>
@@ -29,7 +27,11 @@
         color: #dedede
     
     .position
-        align-items: center
-        justify-content: center
+        width: 150px
+        height: 150px
+        position: absolute
+        top: 50px
+        left: 50px
+    
 
 </style>
