@@ -99,7 +99,7 @@
            </div> -->
            <div>
                 <label for="">Data Inicial:</label> 
-                <select v-model="startDate">
+                <select v-model="-">
                     <!-- availableDate: variavel que é criada dentro do for cada vez que repete 
                          availabilities.results: variavel que foi criada no script p/ receber dados do back
                          value: valor que será selecionado em cada opção

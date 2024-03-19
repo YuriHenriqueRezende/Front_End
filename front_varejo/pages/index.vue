@@ -27,11 +27,9 @@
         color: #dedede
     
     .position
-        width: 150px
-        height: 150px
         position: absolute
-        top: 50px
-        left: 50px
+        top: 2vh
+        left: 5vh
     
 
 </style>
