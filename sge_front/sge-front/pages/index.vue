@@ -1,6 +1,6 @@
 <script setup lang="ts">
     import { ref, computed, reactive } from 'vue'
-    const { signIn } = useAuth();
+    const { signIn } = useAuth() //importando a função de login da sidebase
     
     //JÉSSICA NÃO TRANQUE O CURSO:
     //const username = ref('')
@@ -11,17 +11,17 @@
         password: ''
     });
 
-    const submitLogin = async ()=> {
-        console.log("Trying to login with credentials below:", credentials);
+    const submitLogin = async()=>{
+        console.log("trying to login with credentials below:", credentials);
         try{
-            await signIn(credentials, { redirect: false});
+            await signIn(credentials, {redirect: false});
             navigateTo('/home');
-
         } catch(error){
-            console.log("Error", error);
-
+            console.log("Error when trying to login: ", error);
         }
     }
+    
+
 
     /*
     exemplos para explicar typescript

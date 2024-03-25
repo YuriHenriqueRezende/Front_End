@@ -1,5 +1,4 @@
-/*aqui estamos importando uma fonte nova para o projeto*/
-@font-face{
+@font-face {
     font-family: 'Varela Round';
     src: url('../fonts/VarelaRound-Regular.ttf');
 }
@@ -10,7 +9,7 @@ body {
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Varela Round';/*aqui padronizamos para o projeto a fonte*/
+    font-family: 'Varela Round';
 }
 
 .customButton{
