@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login University</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="login">
+        <section class="login_panel">
+            <div class="login_content">
+                <div class="login_title">
+                    <h2>LOGIN</h2>
+                    <a href="">CADASTRO?</a>
+            </div>
+            <form class="login_form" onsubmit="sendCredentialsToBackend(event)">
+            <div class="form_content">
+                <label for="e-mail">E-mail:</label>
+                <input type="email" class="login_input" id="e-mail" placeholder="  DIGITE SEU E-MAIL" required>
+            </div>
+            <div class="form_content">
+                <label for="pass">Senha:</label>
+                <input type="password" class="login_input" id="pass" placeholder="  DIGITE SUA SENHA" required>
+            </div>
+            <div class="form_button">
+                <button type="submit" id="login_button">Login</button>
+                </div>
+            </form>
+        </div>
+        </section>
+        <section class="logo_panel">
+            <img class="logo_content animation-up" src="./files/images/logo.jpg" alt="">
+            <h2 class="logo_content animation-up">SENAI UNIVERSITY</h2>
+        </section>
+    </main>    
+</body>
+<script src="./script.js"></script>
+</html>
