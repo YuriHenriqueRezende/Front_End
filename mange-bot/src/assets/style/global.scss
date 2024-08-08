@@ -1,8 +1,8 @@
+@import 'primeflex/primeflex.scss';
 @import './reset.scss';
 @import './variables.scss';
-@import 'primeflex/primeflex.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 
 #app{
     font-family: 'Dosis';
@@ -16,3 +16,6 @@
     justify-content: center;
     background-color: var(--app-background);
 }
+
+
+

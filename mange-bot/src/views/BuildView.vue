@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h1>Build</h1>
+    <h1>Build Page!</h1>
   </main>
 </template>

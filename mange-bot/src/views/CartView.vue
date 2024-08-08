@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h1>Cart</h1>
+    <h1>Cart Page!</h1>
   </main>
 </template>
