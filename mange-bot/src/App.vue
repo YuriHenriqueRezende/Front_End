@@ -1,32 +1,30 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import footerBot from './components/footerBot.vue';
+import FooterBot from './components/FooterBot.vue';
+import Menu from './components/Menu.vue';
 </script>
 
 <template>   
   <main id="card-app">
     <div id="content-app">
-      <header>
-        <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/cart">Cart</RouterLink>
-          <RouterLink to="/build">Build</RouterLink>
-        </nav>
-      </header>
-
+      <Menu />
       <RouterView /> 
     </div>
     <footer class="flex flex-row align-items-end justify-content-end">
       <div class="footer-bots flex flex-row justify-content-evenly">
-        <footerBot img="bot0.png" text="robo feliz"/>
-        <footerBot img="bot1.png" text="robo do amor"/>
-        <footerBot img="bot2.png" text="robo do radio"/>
+        <FooterBot img="bot0.png" 
+          text="Crie seu robô com o máximo de tecnologia!"/>
+        <FooterBot img="bot1.png" 
+          text="A platafoma mais amada do Brasil!"/>
+        <FooterBot img="bot2.png" 
+          text="Atendimento online 24hrs!"/>
       </div>
-
+      <img src="/icon2.png" id="circle" >
     </footer>
   </main>
 
 </template>
+
 
 <style scoped lang="scss">
 #card-app{
@@ -39,13 +37,22 @@ import footerBot from './components/footerBot.vue';
 #content-app{
   height: calc(100% - 10rem);
 }
-
 footer{
   width: 100%;
   height: 20%;
   max-height: 10rem;
   background-color: var(--app-footer-background);
   border-radius: 0 0 1.5rem 1.5rem;
+
+  .footer-bots{
+    width: 80%;
+    margin: auto;
+  }
+
+  #circle{
+    height: 100%;
+    margin-right: 1.5rem;
+  }
 }
 
 @media (max-height: 880px){
@@ -53,6 +60,5 @@ footer{
     height: 80%;
   }
 }
-
 
 </style>
