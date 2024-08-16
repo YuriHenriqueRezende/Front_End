@@ -1,4 +1,23 @@
 <script setup lang="ts">
+import { changesLanguage, type AvaiableLanguages, i18nApplication } from '@/i18n/i18n';
+import { type Ref, ref, computed } from 'vue';
+
+
+const currentLanguage: Ref<AvaiableLanguages> = 
+    ref(i18nApplication.global.locale.value);
+
+    const change = ()=> {
+        if(currentLanguage.value == 'br'){
+            changesLanguage('en');
+        }
+        else{
+            changesLanguage('br');
+        }
+        currentLanguage.value = i18nApplication.global.locale.value;
+    };
+
+const flag = computed(()=> currentLanguage.value == 'br'? 'brazil.png' : 'americ.png');
+
 
 </script>
 
@@ -9,6 +28,7 @@
           <RouterLink class="m-4" to="/">Home</RouterLink>
           <RouterLink class="m-4" to="/cart">Cart</RouterLink>
           <RouterLink class="m-4" to="/build">Build</RouterLink>
+          <img id="flag" :src="flag" alt="flag" @click="change">
         </nav>
     </header>
 </template>
@@ -28,6 +48,11 @@
         }
         .router-link-exact-active{
             font-weight: bold;
+        }
+        #flag{
+            height: 2.5rem;
+            width: 3.5rem;
+            cursor: pointer;
         }
     }
 </style>

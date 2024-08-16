@@ -1,11 +1,16 @@
 <script setup lang="ts">
+import { useRoute, useRouter } from 'vue-router';
+const rounter = useRouter();
+
+const goToBuild = ()=> rounter.push('/build');
+
 </script>
 
 <template>
   <div class="flex flex-row align-items-center justify-content-evenly">
     <section class="flex flex-column align-items-center">
-        <h1>Construa agora seu Mange Bot!</h1>
-        <button class="mt-4 app-dark-button" id="order">Quero o meu!</button>
+        <h1>{{ $t('HOME.TITLE') }}</h1>
+        <button class="mt-4 app-dark-button" @click="goToBuild" id="order">{{ $t('HOME.ORDER') }}</button>
     </section>
     <section>
       <img src="/big-bot.png" alt="robot">
