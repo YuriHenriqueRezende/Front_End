@@ -1,18 +1,22 @@
-import axios from "axios";
-import { create } from "node_modules/axios/index.cjs";
+import axios, { type AxiosResponse } from "axios";
 
-export const getAxios = ()=>{
+export const getAxios = ()=> {
     const createdAxios = axios.create({
         baseURL: "https://mange-make-bot.azurewebsites.net/api",
-        timeout: 40000,
+        timeout: 40000, //40segundos
         headers: {
             "Content-Type": "application/json",
             credentials: "include",
-            Authorization: 'Bearer meu token'
+            Authorization: `Bearer meu token....`
         }
     });
+    //createdAxios.interceptors.request ---> executa ANTES de chamar o back
+    //createdAxios.interceptors.response ---> executa DEPOIS de chamar o back
+
     createdAxios.interceptors.response.use(getAxiosResponse);
     return createdAxios;
 }
 
-const getAxiosResponse =
+const getAxiosResponse = (response: AxiosResponse)=>{
+    return response.data;
+}
