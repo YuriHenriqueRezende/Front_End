@@ -1,19 +1,19 @@
-import { createI18n } from 'vue-i18n';
-import PtBrtranslation from './pt_br.json';
-import Entranslation from './en.json';
+import { createI18n } from "vue-i18n";
+import PtBrTranslations from './pt_br.json';
+import EnTranslations from './en.json';
 
-export type AvaiableLanguages = 
+export type AvailableLanguages = 
     'en' | 'br';
 
 export const i18nApplication = createI18n({
     legacy: false,
     locale: 'en',
     messages: {
-        en: Entranslation,
-        br: PtBrtranslation
+        en: EnTranslations,
+        br: PtBrTranslations
     }
-})
+});
 
-export const changesLanguage = (locale: AvaiableLanguages)=>{
+export const changeLanguage = (locale: AvailableLanguages)=>{
     i18nApplication.global.locale.value = locale;
 }

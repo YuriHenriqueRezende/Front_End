@@ -2,7 +2,6 @@
 import { RouterLink, RouterView } from 'vue-router'
 import FooterBot from './components/FooterBot.vue';
 import Menu from './components/Menu.vue';
-
 </script>
 
 <template>   
@@ -14,11 +13,11 @@ import Menu from './components/Menu.vue';
     <footer class="flex flex-row align-items-end justify-content-end">
       <div class="footer-bots flex flex-row justify-content-evenly">
         <FooterBot img="bot0.png" 
-        :text="$t('FOOTER.TECNOLOGY')"/>
+          :text="$t('FOOTER.TECHNOLOGY')"/>
         <FooterBot img="bot1.png" 
-        :text="$t('FOOTER.PLATAFORM')"/>
+          :text="$t('FOOTER.PLATFORM')"/>
         <FooterBot img="bot2.png" 
-        :text="$t('FOOTER.SUPPORT')"/>
+          :text="$t('FOOTER.SUPPORT')"/>
       </div>
       <img src="/icon2.png" id="circle" >
     </footer>
