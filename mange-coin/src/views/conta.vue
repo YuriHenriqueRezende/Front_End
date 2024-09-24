@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h1>roleta</h1>
+    <h1>Conta</h1>
   </main>
 </template>
