@@ -6,3 +6,7 @@
     <h1>conta</h1>
   </main>
 </template>
+
+<style>
+
+</style>
