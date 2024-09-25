@@ -1,18 +1,23 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import Menu from './components/menu.vue';
 </script>
 
 <template>
   <header>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/Conta">Conta</RouterLink>
-        <RouterLink to="/Roleta">Roleta</RouterLink>
-      </nav>
+    <Menu />
+
   </header>
   <RouterView />
 </template>
 
-<style scoped>
-
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>

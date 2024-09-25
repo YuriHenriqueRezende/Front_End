@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h1>casino</h1>
+    <h1>conta</h1>
   </main>
 </template>
