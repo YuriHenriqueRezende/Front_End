@@ -12,4 +12,4 @@ export default defineConfig({
     },
     viewportHeight: 950,
     viewportWidth: 1300
-})
+});
