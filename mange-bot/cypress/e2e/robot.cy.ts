@@ -7,7 +7,12 @@ const el = {
   buildContainer: ()=> cy.get("#build-page"),
   flag: ()=> cy.get("header #flag"),
   homeTitle: ()=> cy.get("#home-page #title"),
-  partImagesArray: ()=> cy.get(".part .part-image")
+  partImagesArray: ()=> cy.get(".part .part-image"),
+  partSelectorArray: ()=> cy.get(".part"),
+  buttomParts: {
+    next: () => cy.get(".next-selector"),
+    previous: () => cy.get(".prev-selector"),
+  }
 }
 
 
@@ -53,10 +58,26 @@ describe('testing build page', () => {
       console.log(sourceImage);
       if (!sourceImage){
         throw new Error('Source is empty')
-
-
-      
       }
+    })
+  })
+
+  it('checking part chaning', () => {
+    const partSelectors = el.partSelectorArray();
+    partSelectors.each($part=>{
+      const part = cy.wrap($part);
+      const image = ()=> part.get("img");
+      const next = part.get(".next-selector");
+      const previous = part.get(".prev-selector");
+  
+      let imageId;
+      let newImageId;
+
+      image().each($img=> imageId=$img.attr('image-id'));
+      next.click();
+      image().each($img=> newImageId=$img.attr('image-id'))
+      console.log("old imageId", imageId)
+      console.log("new imageId", newImageId)
     })
   })
 })

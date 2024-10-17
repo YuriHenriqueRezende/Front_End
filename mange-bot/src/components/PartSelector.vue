@@ -50,7 +50,8 @@ const changePart = (isNext: boolean)=>{
 </script>
 <template>
     <div :class="`part ${props.position}`" v-if="props.parts[selectedIndex]">          
-        <img class="part-image" :src="BASE_URL + props.parts[selectedIndex]?.src" alt="">
+        <img class="part-image" :image-id="props.parts[selectedIndex].id"
+         :src="BASE_URL + props.parts[selectedIndex]?.src" alt="">
         <button @click="changePart(false)" class="prev-selector"></button>
         <button @click="changePart(true)" class="next-selector"></button>
     </div>
