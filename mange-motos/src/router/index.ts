@@ -18,8 +18,8 @@ const router = createRouter({
       component: ContaView
     },
     {
-      path: '/roleta',
-      name: 'roleta',
+      path: '/motos',
+      name: 'motos',
       component: motosView
     },
     {
