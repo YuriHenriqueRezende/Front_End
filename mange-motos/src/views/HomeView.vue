@@ -8,7 +8,7 @@ export default defineComponent({
 
 
 <template>
-
+<h1>MANGE MOTOS</h1>
 </template>
 
 <style scoped>

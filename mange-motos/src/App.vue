@@ -13,7 +13,8 @@ import Menu from './components/menu.vue';
       </header>
       <RouterView />
     </div>
-    <footer>
+    <footer class="flex flex-row align-items-end justify-content-end">
+
     </footer>
   </main>
 </template>
@@ -24,6 +25,12 @@ import Menu from './components/menu.vue';
   width: 80%;
   background-color: var(--app-card-background);
   border-radius: 1.5rem;
+}
+footer{
+  width: 100%;
+  height: 20%;
+  background-color: var(--app-footer-background);
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
 </style>
