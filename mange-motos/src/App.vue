@@ -16,9 +16,8 @@ import info from './components/info.vue';
     </div>
     <footer class="flex flex-row align-items-end justify-content-end">
       <div class="footer-motos flex flex-row justify-content-evenly">
-        <info img="todas.png" text="test"/>
-        <info img="" text=""/>
-        <info img="" text=""/>
+        <info img="todas.png" text="Empresa autorizada"/>
+        <info img="cachorro.jpg" text="Seguro animal DPCAT"/>
       </div>
     </footer>
   </main>
