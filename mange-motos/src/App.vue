@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import Menu from './components/menu.vue';
-import FooterMotos from './components/menu.vue';
+import info from './components/info.vue';
 </script>
 
 <template>
@@ -16,9 +16,9 @@ import FooterMotos from './components/menu.vue';
     </div>
     <footer class="flex flex-row align-items-end justify-content-end">
       <div class="footer-motos flex flex-row justify-content-evenly">
-        <FooterMotos img="" text=""/>
-        <FooterMotos img="" text=""/>
-        <FooterMotos img="" text=""/>
+        <info img="todas.png" text="test"/>
+        <info img="" text=""/>
+        <info img="" text=""/>
       </div>
     </footer>
   </main>
@@ -41,6 +41,11 @@ footer{
   background-color: var(--app-footer-background);
   border-radius: 0 0 1.5rem 1.5rem;
 }
+
+.footer-motos{
+    width: 80%;
+    margin: auto;
+  }
 
 @media (max-height: 880px){
   #content-app{
