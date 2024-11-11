@@ -6,9 +6,9 @@
     <img src="/logo.png" alt="moto">
     <nav class="ml-5">
       <a href="ml-5"></a>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/Conta">Conta</RouterLink>
-    <RouterLink to="/Motos">Motos</RouterLink>
+    <RouterLink class="m-4" to="/">Home</RouterLink>
+    <RouterLink class="m-4"to="/Conta">Conta</RouterLink>
+    <RouterLink class="m-4" to="/Motos">Motos</RouterLink>
   </nav>
   </header>
 </template>
@@ -25,6 +25,9 @@ header{
     text-decoration: none;
     font-size: 1.5rem;
     color: var(--app-dark-text-color);
+  }
+  .router-link-exact-active{
+    font-weight: bold;
   }
 }
 

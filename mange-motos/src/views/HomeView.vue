@@ -8,7 +8,15 @@ export default defineComponent({
 
 
 <template>
-<h1>MANGE MOTOS</h1>
+  <div class="flex flex-row align-items-center justify-content-evenly">
+    <section class="flex flex-column align-items-center">
+      <h1>Monte sua moto!</h1>
+      <button>Quero montar</button>
+      <section>
+        <img src="/moto.png" alt="">
+      </section>
+    </section>
+  </div>
 </template>
 
 <style scoped>
