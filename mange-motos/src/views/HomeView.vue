@@ -3,7 +3,6 @@ import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 
-const goToBuild = ()=> router.push('/motos');
 
 </script>
 
@@ -12,7 +11,7 @@ const goToBuild = ()=> router.push('/motos');
   <div class="flex flex-row align-items-center justify-content-evenly">
     <section class="flex flex-column align-items-center">
       <h1>Monte sua moto!</h1>
-      <button class="mt-4 app-dark-button" @click="goToBuild" id="order">Quero montar</button>
+      <button class="mt-4 app-dark-button" @click="router.push('/motos')" id="order">Quero montar</button>
     </section>
       <section>
         <img src="/moto.png" alt="moto">
