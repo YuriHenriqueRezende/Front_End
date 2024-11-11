@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import ContaView from '@/views/contaView.vue'
+import HomeView from '../views/HomeView.vue'
 import motosView from '@/views/motosView.vue'
 import Found from '@/views/found.vue'
 
