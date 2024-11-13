@@ -10,6 +10,7 @@ export const getAxios = ()=> {
         }
     });
     createAxios.interceptors.response.use(getAxiosResponse);
+    return createAxios;
 }
 
 const getAxiosResponse = (response: AxiosResponse)=>{
