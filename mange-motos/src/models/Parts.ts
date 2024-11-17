@@ -7,6 +7,7 @@ export class Part {
     id: number = 0;
     name: string = "";
     type: PartTypes = PartTypes.frente;
+    url: string = "";
     price: number = 0.0;
 }
 
