@@ -1,5 +1,4 @@
 import axios, { type AxiosResponse } from "axios";
-export const BASE_URL = import.meta.env.VITE_BACKEND_URL
 
 export const getAxios = ()=> {
     const createAxios = axios.create({
