@@ -1,11 +1,4 @@
-<template>
-    <div class="category-card">
-      <h2>{{ title }}</h2>
-      <img :src="image" :alt="`Imagem da categoria ${title}`" />
-    </div>
-  </template>
-  
-  <script lang="ts">
+<script lang="ts">
   import { defineComponent } from "vue";
   
   export default defineComponent({
@@ -22,7 +15,14 @@
     },
   });
   </script>
-  
+
+<template>
+  <div class="category-card">
+    <h2>{{ title }}</h2>
+    <img :src="image" :alt="`Imagem da categoria ${title}`" />
+  </div>
+</template>
+
   <style lang="scss" scoped>
   .category-card {
     border: 1px solid #ccc;

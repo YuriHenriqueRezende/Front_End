@@ -1,3 +1,40 @@
+<script lang="ts">
+import { defineComponent, ref, onMounted } from "vue";
+import PartCard from "./PartCard.vue";
+
+export default defineComponent({
+  name: "PartList",
+  components: { PartCard },
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    endpoint: {
+      type: String,
+      required: true,
+    },
+  },
+  setup(props) {
+    const parts = ref<any[]>([]);
+
+    // Fetch data from the API
+    const fetchParts = async () => {
+      try {
+        const response = await fetch(props.endpoint);
+        parts.value = await response.json();
+      } catch (error) {
+        console.error("Erro ao buscar peças:", error);
+      }
+    };
+
+    onMounted(fetchParts);
+
+    return { parts };
+  },
+});
+</script>
+
 <template>
     <section>
       <h2>{{ title }}</h2>
@@ -7,44 +44,7 @@
     </section>
   </template>
   
-  <script lang="ts">
-  import { defineComponent, ref, onMounted } from "vue";
-import PartCard from "./PartCard.vue";
-  
-  export default defineComponent({
-    name: "PartList",
-    components: { PartCard },
-    props: {
-      title: {
-        type: String,
-        required: true,
-      },
-      endpoint: {
-        type: String,
-        required: true,
-      },
-    },
-    setup(props) {
-      const parts = ref<any[]>([]);
-  
-      // Fetch data from the API
-      const fetchParts = async () => {
-        try {
-          const response = await fetch(props.endpoint);
-          parts.value = await response.json();
-        } catch (error) {
-          console.error("Erro ao buscar peças:", error);
-        }
-      };
-  
-      onMounted(fetchParts);
-  
-      return { parts };
-    },
-  });
-  </script>
-  
-  <style lang="scss" scoped>
+  <style scoped lang="scss">
   .part-list {
     display: flex;
     gap: 20px;

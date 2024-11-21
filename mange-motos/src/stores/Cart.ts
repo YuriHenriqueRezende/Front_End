@@ -1,34 +1,32 @@
-// src/stores/Cart.ts
 import { defineStore } from 'pinia';
 
 export const useCart = defineStore('cart', {
   state: () => ({
-    robots: [] as Array<any>,  // Carrinho atual
-    purchaseHistory: [] as Array<any>,  // Histórico de compras
+    robots: [] as Array<any>, 
+    purchaseHistory: [] as Array<any>,  
   }),
 
   actions: {
     addItemToCart(item: any) {
-      this.robots.push(item);  // Adiciona item ao carrinho
+      this.robots.push(item);  
     },
 
     removeCart(index: number) {
-      this.robots.splice(index, 1);  // Remove item do carrinho
+      this.robots.splice(index, 1); 
     },
 
     checkout() {
-      // Ao finalizar a compra, move o conteúdo do carrinho para o histórico
       const purchase = {
         date: new Date().toLocaleString(),
-        items: [...this.robots],  // Clona os itens
+        items: [...this.robots],  
         total: this.getTotalCost(),
       };
       this.purchaseHistory.push(purchase);
-      this.robots = [];  // Limpa o carrinho
+      this.robots = []; 
     },
 
     getTotalCost() {
-      return this.robots.reduce((total, robot) => total + robot.cost, 0);  // Calcula o custo total
+      return this.robots.reduce((total, robot) => total + robot.cost, 0);  
     },
   },
 });

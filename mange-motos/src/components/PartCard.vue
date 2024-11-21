@@ -1,12 +1,4 @@
-<template>
-    <div class="part-card">
-      <img :src="part.url" :alt="part.name" />
-      <h3>{{ part.name }}</h3>
-      <p>Preço: R$ {{ part.price }}</p>
-    </div>
-  </template>
-  
-  <script lang="ts">
+<script lang="ts">
   import { defineComponent, PropType } from "vue";
   
   export default defineComponent({
@@ -19,8 +11,16 @@
     },
   });
   </script>
-  
-  <style lang="scss" scoped>
+
+<template>
+  <div class="part-card">
+    <img :src="part.url" :alt="part.name" />
+    <h3>{{ part.name }}</h3>
+    <p>Preço: R$ {{ part.price }}</p>
+  </div>
+</template>
+
+  <style scoped lang="scss">
   .part-card {
     border: 1px solid #ccc;
     border-radius: 8px;

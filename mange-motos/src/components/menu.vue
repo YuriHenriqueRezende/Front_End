@@ -9,6 +9,8 @@
     <RouterLink class="m-4" to="/">Home</RouterLink>
     <RouterLink class="m-4"to="/Conta">Conta</RouterLink>
     <RouterLink class="m-4" to="/Motos">Motos</RouterLink>
+    <RouterLink class="m-4" to="/Login">Login</RouterLink>
+
   </nav>
   </header>
 </template>

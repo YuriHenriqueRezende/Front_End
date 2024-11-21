@@ -3,10 +3,8 @@ import { reactive, onMounted } from 'vue';
 import { useCart } from '@/stores/Cart';
 import axios from 'axios';
 
-// Usando o store para carrinho
 const cart = useCart();
 
-// Peças carregadas do servidor
 const parts = reactive({
   frente: [] as any[],
   motor: [] as any[],
@@ -14,7 +12,6 @@ const parts = reactive({
   rodaTraseira: [] as any[],
 });
 
-// Peças selecionadas
 const selectedParts = reactive({
   frente: null as any,
   motor: null as any,
@@ -22,7 +19,6 @@ const selectedParts = reactive({
   rodaTraseira: null as any,
 });
 
-// Função para carregar dados do JSON Server
 async function loadParts() {
   try {
     const frente = await axios.get('http://localhost:3000/frente');
@@ -35,7 +31,6 @@ async function loadParts() {
     parts.rodaFrente = rodaFrente.data;
     parts.rodaTraseira = rodaTraseira.data;
 
-    // Definir peças iniciais
     selectedParts.frente = parts.frente[0];
     selectedParts.motor = parts.motor[0];
     selectedParts.rodaFrente = parts.rodaFrente[0];
@@ -45,7 +40,6 @@ async function loadParts() {
   }
 }
 
-// Trocar peça atual
 function changePart(part: string) {
   const partList = parts[part as keyof typeof parts];
   const currentIndex = partList.findIndex(
@@ -55,7 +49,6 @@ function changePart(part: string) {
     partList[(currentIndex + 1) % partList.length];
 }
 
-// Adicionar ao carrinho
 function addToCart() {
   const robot = {
     head: selectedParts.frente,
@@ -65,11 +58,10 @@ function addToCart() {
     rightArm: selectedParts.rodaTraseira,
     cost: selectedParts.motor?.price + selectedParts.rodaFrente?.price + selectedParts.rodaTraseira?.price,
   };
-  cart.addItemToCart(robot); // Adiciona o item ao carrinho
-  console.log(cart); // Verifique o conteúdo do carrinho
+  cart.addItemToCart(robot); 
+  console.log(cart); 
 }
 
-// Carregar peças ao montar o componente
 onMounted(() => {
   loadParts();
 });

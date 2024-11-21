@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useCart } from '@/stores/Cart';
 
-const cart = useCart(); // Acessando o store Cart
+const cart = useCart(); 
 </script>
 
 <template>
