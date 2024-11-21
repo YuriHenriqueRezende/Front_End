@@ -1,12 +1,13 @@
 <script setup lang="ts">
+import { reactive, ref } from 'vue';
+
 </script>
 
 <template>
-  <main>
-    <h1>conta</h1>
-  </main>
+
 </template>
 
-<style>
+
+<style scoped lang="scss">
 
 </style>

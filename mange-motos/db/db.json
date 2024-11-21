@@ -1,40 +1,29 @@
 {
-  "images": [
-    { "id": 0, "name": "cachorro", "price": 100, "type": "animal", "url": "/cachorro.jpg" },
+  "frente": [
     { "id": 1, "name": "Frente-1", "price": 120, "type": "frente", "url": "/Frente-1.png" },
     { "id": 2, "name": "Frente-2", "price": 120, "type": "frente", "url": "/Frente-2.png" },
     { "id": 3, "name": "Frente-3", "price": 120, "type": "frente", "url": "/Frente-3.png" },
     { "id": 4, "name": "Frente-4", "price": 120, "type": "frente", "url": "/Frente-4.png" },
     { "id": 5, "name": "Frente-5", "price": 120, "type": "frente", "url": "/Frente-5.png" },
     { "id": 6, "name": "Frente-6", "price": 120, "type": "frente", "url": "/Frente-6.png" },
-    { "id": 7, "name": "Frente-7", "price": 120, "type": "frente", "url": "/Frente-7.png" },
-    { "id": 8, "name": "Group 40", "price": 150, "type": "grupo", "url": "/Group 40.png" },
-    { "id": 9, "name": "Group 41", "price": 150, "type": "grupo", "url": "/Group 41.png" },
-    { "id": 10, "name": "Group 42", "price": 150, "type": "grupo", "url": "/Group 42.png" },
-    { "id": 11, "name": "Group 54", "price": 150, "type": "grupo", "url": "/Group 54.png" },
-    { "id": 12, "name": "Group 55", "price": 150, "type": "grupo", "url": "/Group 55.png" },
-    { "id": 13, "name": "Group 56", "price": 150, "type": "grupo", "url": "/Group 56.png" },
-    { "id": 14, "name": "Group 57", "price": 150, "type": "grupo", "url": "/Group 57.png" },
-    { "id": 15, "name": "Group 58", "price": 150, "type": "grupo", "url": "/Group 58.png" },
-    { "id": 16, "name": "Group 59", "price": 150, "type": "grupo", "url": "/Group 59.png" },
-    { "id": 17, "name": "logo", "price": 50, "type": "logotipo", "url": "/logo.png" },
-    { "id": 18, "name": "modelo", "price": 200, "type": "modelo", "url": "/modelo.png" },
-    { "id": 19, "name": "moto", "price": 300, "type": "veículo", "url": "/moto.png" },
+    { "id": 7, "name": "Frente-7", "price": 120, "type": "frente", "url": "/Frente-7.png" }],
+  "motores": [
     { "id": 20, "name": "Motor-1", "price": 250, "type": "motor", "url": "/Motor-1.png" },
     { "id": 21, "name": "Motor-2", "price": 250, "type": "motor", "url": "/Motor-2.png" },
     { "id": 22, "name": "Motor-3", "price": 250, "type": "motor", "url": "/Motor-3.png" },
     { "id": 23, "name": "Motor-4", "price": 250, "type": "motor", "url": "/Motor-4.png" },
     { "id": 24, "name": "Motor-5", "price": 250, "type": "motor", "url": "/Motor-5.png" },
     { "id": 25, "name": "Motor-6", "price": 250, "type": "motor", "url": "/Motor-6.png" },
-    { "id": 26, "name": "Motor-7", "price": 250, "type": "motor", "url": "/Motor-7.png" },
-    { "id": 27, "name": "Motores", "price": 350, "type": "motor", "url": "/Motores.jpg" },
+    { "id": 26, "name": "Motor-7", "price": 250, "type": "motor", "url": "/Motor-7.png" }],
+  "roda-frente": [
     { "id": 28, "name": "RodaFrente-1", "price": 180, "type": "roda_frente", "url": "/RodaFrente-1.png" },
     { "id": 29, "name": "RodaFrente-2", "price": 180, "type": "roda_frente", "url": "/RodaFrente-2.png" },
     { "id": 30, "name": "RodaFrente-3", "price": 180, "type": "roda_frente", "url": "/RodaFrente-3.png" },
     { "id": 31, "name": "RodaFrente-4", "price": 180, "type": "roda_frente", "url": "/RodaFrente-4.png" },
     { "id": 32, "name": "RodaFrente-5", "price": 180, "type": "roda_frente", "url": "/RodaFrente-5.png" },
     { "id": 33, "name": "RodaFrente-6", "price": 180, "type": "roda_frente", "url": "/RodaFrente-6.png" },
-    { "id": 34, "name": "RodaFrente-7", "price": 180, "type": "roda_frente", "url": "/RodaFrente-7.png" },
+    { "id": 34, "name": "RodaFrente-7", "price": 180, "type": "roda_frente", "url": "/RodaFrente-7.png" }],
+  "roda_traseira": [
     { "id": 35, "name": "RodaTraseira-1", "price": 200, "type": "roda_traseira", "url": "/RodaTraseira-1.png" },
     { "id": 36, "name": "RodaTraseira-2", "price": 200, "type": "roda_traseira", "url": "/RodaTraseira-2.png" },
     { "id": 37, "name": "RodaTraseira-3", "price": 200, "type": "roda_traseira", "url": "/RodaTraseira-3.png" },
@@ -42,7 +31,6 @@
     { "id": 39, "name": "RodaTraseira-5", "price": 200, "type": "roda_traseira", "url": "/RodaTraseira-5.png" },
     { "id": 40, "name": "RodaTraseira-6", "price": 200, "type": "roda_traseira", "url": "/RodaTraseira-6.png" },
     { "id": 41, "name": "RodaTraseira-7", "price": 200, "type": "roda_traseira", "url": "/RodaTraseira-7.png" },
-    { "id": 42, "name": "RodaTraseira-8", "price": 200, "type": "roda_traseira", "url": "/RodaTraseira-8.png" },
-    { "id": 43, "name": "todas", "price": 400, "type": "conjunto", "url": "/todas.png" }
+    { "id": 42, "name": "RodaTraseira-8", "price": 200, "type": "roda_traseira", "url": "/RodaTraseira-8.png" }
   ]
 }
