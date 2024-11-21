@@ -3,7 +3,6 @@ import ContaView from '@/views/contaView.vue'
 import HomeView from '../views/HomeView.vue'
 import motosView from '@/views/motosView.vue'
 import Found from '@/views/found.vue'
-import SummaryTable from '@/components/SummaryTable.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,7 +15,7 @@ const router = createRouter({
     {
       path: '/conta',
       name: 'conta',
-      component: SummaryTable
+      component: ContaView
     },
     {
       path: '/motos',
